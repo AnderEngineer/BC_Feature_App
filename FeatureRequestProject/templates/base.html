@@ -16,26 +16,32 @@
   </head>
 
   <body>
+
+    {% include 'navbar.html' %}
+
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
 
-          {% include 'navbar.html' %}
+          <div class="inner-content">
 
-          {% block content %}
+            {% block content %}
 
-          {% endblock %}
+            {% endblock %}
 
-          {% include 'footer.html' %}
+          </div>
 
         </div>
+
+        {% include 'footer.html' %}
 
       </div>
 
     </div>
 
     {% include 'javascript.html' %}
+
   </body>
 </html>

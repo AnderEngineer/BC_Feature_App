@@ -1,6 +1,7 @@
 from django import forms
 from django.forms.widgets import DateInput, NumberInput, URLInput
 from .models import FeatureRequest
+from datetime import datetime
 
 class FeatureRequestForm(forms.ModelForm):
     class Meta:
@@ -14,3 +15,10 @@ class FeatureRequestForm(forms.ModelForm):
             'target_date':DateInput(attrs = {'type':'date'}),
             'ticket_url':URLInput(),
         }
+
+    def clean_target_date(self):
+        """ Checks if the given target date is in the future """
+        date_given = self.cleaned_data.get('target_date')
+        if date_given < datetime.today().date():
+            raise forms.ValidationError("Please select a future target date.")
+        return date_given

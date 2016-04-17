@@ -18,7 +18,10 @@ a:hover {
   background-color: #fff;
   border: 1px solid #fff;
 }
-
+.inner-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 /*
  * Base structure
@@ -51,11 +54,6 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
 }
 
 
@@ -124,6 +122,7 @@ body {
  */
 
 .mastfoot {
+  background-color:black;
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
 }

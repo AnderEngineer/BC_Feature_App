@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="inner cover">
+  <h1 class="cover-heading">All Feature Requests</h1>
+  <div class="row">
+  {% if feature_requests %}
+    <table class='table table-bordered'>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Client</th>
+        <th>Client Priority</th>
+        <th>Target Date</th>
+        <th>Ticket Url</th>
+        <th>Product Area</th>
+        <th>Date Created</th>
+      </tr>
+      {% for request in feature_requests %}
+        <tr>
+          <td>{{ request.title }}</td><td>{{ request.description }}</td><td>{{ request.get_client_display }}</td><td>{{ request.client_priority }}</td><td>{{ request.target_date }}</td><td>{{ request.ticket_url }}</td><td>{{ request.get_product_area_display }}</td><td>{{ request.date_created }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -20,6 +20,7 @@ import feature_request.views
 urlpatterns = [
     url(r'^$', feature_request.views.home),
     url(r'^feature_request/', feature_request.views.feature_request),
+    url(r'^view_requests/', feature_request.views.view_requests),
     url(r'^admin/', admin.site.urls),
 ]
 
