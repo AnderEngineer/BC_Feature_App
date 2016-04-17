@@ -1,5 +1,5 @@
 from django import forms
-from django.forms.widgets import SelectDateWidget
+from django.forms.widgets import DateInput, NumberInput, URLInput
 from .models import FeatureRequest
 
 class FeatureRequestForm(forms.ModelForm):
@@ -9,5 +9,8 @@ class FeatureRequestForm(forms.ModelForm):
                   'target_date', 'ticket_url', 'product_area')
         # Select widgets for certain fields
         widgets = {
-            'target_date':SelectDateWidget(),
+            'description':forms.Textarea(attrs={'rows':'4'}),
+            'client_priority':NumberInput(attrs={'min': '1'}),
+            'target_date':DateInput(attrs = {'type':'date'}),
+            'ticket_url':URLInput(),
         }

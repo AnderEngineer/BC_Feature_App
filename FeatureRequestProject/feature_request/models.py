@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from constants import CLIENTS
+from constants import CLIENTS, PRODUCT_AREAS
 
 # Create your models here.
 class FeatureRequest(models.Model):
@@ -11,5 +11,5 @@ class FeatureRequest(models.Model):
     client_priority = models.IntegerField()
     target_date = models.DateField()
     ticket_url = models.CharField(max_length=2048)
-    product_area = models.CharField(max_length=120)
+    product_area = models.IntegerField(choices=PRODUCT_AREAS)
     date_created = models.DateTimeField(auto_now_add=True, auto_now=False)
