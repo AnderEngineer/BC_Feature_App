@@ -6,9 +6,9 @@ from django.db import models
 class FeatureRequest(models.Model):
     # Available clients used in model
     CLIENTS = (
-        (1, 'ClientA'),
-        (2, 'ClientB'),
-        (3, 'ClientC'),
+        (1, 'Client A'),
+        (2, 'Client B'),
+        (3, 'Client C'),
     )
     # Available product areas used in model
     PRODUCT_AREAS = (
