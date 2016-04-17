@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> {{ template_title }} </title>
-    </head>
-
-    <body>
-        <h1>Home</h1>
-        <p>Go to <a href='/feature_request'>Feature Request</a></p>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="inner cover">
+  <h1 class="cover-heading">Feature Request</h1>
+  <p class="lead">Enter a new feature request using the most advanced feature request system available.</p>
+  <p class="lead">
+    <a href="/feature_request" class="btn btn-lg btn-default">Get Started</a>
+  </p>
+</div>
+{% endblock %}

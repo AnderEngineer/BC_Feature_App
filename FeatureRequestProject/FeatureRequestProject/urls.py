@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
 import feature_request.views
 
 urlpatterns = [
@@ -23,3 +22,4 @@ urlpatterns = [
     url(r'^feature_request/', feature_request.views.feature_request),
     url(r'^admin/', admin.site.urls),
 ]
+

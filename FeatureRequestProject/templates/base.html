@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Base template for Feature Request App">
+    <meta name="author" content="mrandersondev">
+
+    <title> {{ template_title }} </title>
+
+    {% include 'head_css.html' %}
+
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          {% include 'navbar.html' %}
+
+          {% block content %}
+
+          {% endblock %}
+
+          {% include 'footer.html' %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {% include 'javascript.html' %}
+  </body>
+</html>

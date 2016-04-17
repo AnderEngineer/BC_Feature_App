@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> {{ template_title }} </title>
-    </head>
-
-    <body>
-        <h1>Feature Request</h1>
-        <form method='POST' action=''>{% csrf_token %}
-        {{ feature_form.as_p }}
-        <input type='submit' value='Request'>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="inner cover">
+  <h1 class="cover-heading">Feature Request</h1>
+  <form method='POST' action=''>{% csrf_token %}
+  {{ feature_form.as_p }}
+  <input type='submit' value='Request'>
+</div>
+{% endblock %}
